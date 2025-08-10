@@ -1,0 +1,637 @@
+<!doctype html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta charset="utf-8">
+    <style>
+        .js #features {
+            margin-left: -12000px; width: 100%;
+        }
+        
+        /* Space Mouse Effect Styles */
+        #space-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, #0c0c1e 0%, #1a1a3a 50%, #2d1b69 100%);
+        }
+        
+        body {
+            background: transparent;
+        }
+        
+        #container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Enhance the book appearance */
+        #features {
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Make navigation more visible */
+        nav {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        nav li {
+            list-style: none;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        p{
+            font-size:1rem !important;
+        }
+        h1{
+            font-size:1.6rem !important;
+        }
+    </style>
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+       Remove this if you use the .htaccess -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Cosmic Quest</title>
+    <meta name="description" content="">
+    <meta name="author" content="Tareq Khalil">
+
+    <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS : implied media="all" -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/wow_book.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/preview.css"><!-- Uncomment if you are specifically targeting less enabled mobile browsers
+	<link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
+
+    <link href='//fonts.googleapis.com/css?family=News+Cycle' rel='stylesheet' type='text/css'>
+    <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+    <script src="js/modernizr-1.6.min.js"></script>
+
+</head>
+<body>
+<!-- Space Mouse Effect Canvas -->
+<canvas id="space-canvas"></canvas>
+
+<div id="container">
+<nav>
+    <ul>
+        <li><a id='first'     href="#" title='goto first page'   >First page</a></li>
+        <li><a id='back'      href="#" title='go back one page'  >Back</a></li>
+        <li><a id='next'      href="#" title='go foward one page'>Next</a></li>
+        <li><a id='last'      href="#" title='goto last page'    >last page</a></li>
+        <li><a id='zoomin'    href="#" title='zoom in'           >Zoom In</a></li>
+        <li><a id='zoomout'   href="#" title='zoom out'          >Zoom Out</a></li>
+        <li><a id='slideshow' href="#" title='start slideshow'   >Slide Show</a></li>
+        <li><a id='flipsound' href="#" title='flip sound on/off' >Flip sound</a></li>
+        <li><a id='fullscreen' href="#" title='fullscreen on/off' >Fullscreen</a></li>
+        <li><a id='thumbs'    href="#" title='thumbnails on/off' >Thumbs</a></li>
+    </ul>
+</nav>
+
+<div id="main">
+    <img id='click_to_open' src="images/click_to_open.png" alt='click to open' />
+    <div id='features'>
+        <div id='cover'>
+        </div>
+
+        <div class='feature pagefx hardpage'>
+            <p class='subtitle'>STEM October Presents</p>
+            <h1>COSMIC QUEST</h1>
+            <p>🚀 The Ultimate Space Exploration Challenge 🌟</p>
+            <p>Join us for an extraordinary journey through the cosmos! Cosmic Quest is an innovative STEM competition that challenges students to design, build, and program solutions for space exploration missions.
+            </p>
+            <br/>
+            <h1>Mission Launch: March 2025</h1>
+            <p>Teams will tackle real-world space challenges including satellite design, Mars rover programming, and asteroid mining simulations. Prize pool of $10,000 awaits the most innovative cosmic explorers!</p>
+        </div>
+        <div class='feature pagefx softpage'>
+            <a href="https://hc-cdn.hel1.your-objectstorage.com/s/v3/a960baa12e1412ad8a315de557250d1770bce2e4_vid-20250303-wa0031.mp4"><video src="No video description...-fdown.net.mp4" style="margin-top: auto; margin-bottom: auto; margin-left: auto; margin-right: auto; width: 100%; height: 100%;"></video></a>
+            
+        </div>
+
+        <div class='responsive feature'>
+            <h1 style="text-align: center; margin-top: 50%; margin-bottom: 50%; margin-left: 20%; margin-right: 50%; width: 50%; display: block;">COSMIC QUEST CHALLENGES</h1>
+            <div class='subtitle'>🌌 Four Epic Missions Await 🌌</div>
+            
+        </div>
+        <div class='responsive feature'> 
+            <h2>🛰️ Mission 1: Satellite Design Challenge</h2>
+            <p>
+                <b>Design and build</b> a functional <b>communication satellite</b> capable of transmitting data across vast distances. Teams must consider power management, signal strength, and orbital mechanics in their innovative designs.
+            </p>
+            <p>
+            <p>
+                Your satellite must demonstrate <b>autonomous positioning systems</b> and withstand simulated space conditions including radiation and temperature extremes.
+            </p>
+           
+        </div>
+        <div class='responsive feature'>
+             <p>Teams will receive advanced <b>microcontrollers and sensors</b> to create their satellite systems, with bonus points awarded for innovative communication protocols and energy-efficient designs.
+            </p>
+            <h2>🔴 Mission 2: Mars Rover Programming</h2>
+            <h3>Navigate the Red Planet</h3>
+            <p>
+                Program an autonomous rover to navigate challenging Martian terrain, collect samples, and transmit scientific data back to Earth.            </p>
+        </div>
+        <div class='responsive feature'>
+            <p>
+                Your rover must demonstrate <b>intelligent pathfinding</b>, obstacle avoidance, and precise sample collection using computer vision and machine learning algorithms.            </p>
+                <br><h3>⚡ Mission 3: Space Station Power Systems</h3>
+                <p>Design a <b>sustainable power grid</b> for a space station using solar panels, fuel cells, and energy storage systems. Teams must balance <b>power generation and consumption</b> while maintaining life support systems during solar eclipses and equipment malfunctions.</p>
+        </div>
+        <div class='responsive feature'>
+            <h2>💎 Mission 4: Asteroid Mining Operation</h2>
+            <h3>Extract Precious Resources</h3>
+            <p>Program robotic mining equipment to <b>identify and extract valuable minerals</b> from simulated asteroids. Teams must develop efficient mining strategies while managing limited fuel and equipment durability.</p>                
+            <br>
+            <h3>🏆 Competition Timeline & Prizes</h3>
+                <p>Registration opens January 15th, 2025. Teams of <b>3-5 students</b> will compete through</p>
+        </div>
+        <div class="responsive feature">
+            <p>qualifying rounds, semi-finals, and the grand finale. <b>First Place: $5,000</b> | <b>Second Place: $3,000</b> | <b>Third Place: $2,000</b>. Special recognition awards for <b>Most Innovative Design</b>, <b>Best Teamwork</b>, and <b>Outstanding Programming</b> with additional prizes of $500 each!</p>
+        </div>
+
+        <div class='feature design'>
+            <h1>🎯 REGISTRATION</h1>
+            <div class='subtitle'>Join the Cosmic Adventure</div>
+        </div>
+        <div class='feature design'>
+            <p>
+                Ready to embark on your space mission? Register your team today and receive exclusive access to training materials, expert workshops, and cutting-edge development tools.
+            </p>
+        </div>
+
+        <div class='thumbnails feature'>
+            <h1>🚀 Requirements & Equipment</h1>
+            <p>All teams receive professional-grade equipment including microcontrollers, sensors, and development boards.</p>
+            <h2>📋 Team Requirements:</h2>
+            <p>Teams must consist of 3-5 students from grades 9-12. At least one member should have programming experience in Python, C++, or Arduino IDE.</p>
+            <p>Each team needs a faculty advisor and must submit a project proposal by February 1st, 2025.</p>
+            <h2>🛠️ Provided Equipment:</h2>
+            <p>
+                Arduino/Raspberry Pi kits, sensors (GPS, accelerometer, camera modules), communication modules, building materials, and access to 3D printing facilities. Teams may also bring additional components with prior approval.
+            </p>
+        </div>
+        <div class='thumbnails feature' >
+            <div style='padding-left: 1em'>
+                <h2>📅 Important Dates:</h2>
+                <div id='cosmic_dates'>
+                    <button>Registration Opens: Jan 15, 2025</button>
+                    <button>Proposal Deadline: Feb 1, 2025</button>
+                </div>
+                <h2>🏁 Competition Phases:</h2>
+                <p>Three intensive phases leading to the grand finale.</p>
+                <div id='competition_phases'>
+                    <button>Qualifying Round: March 1-7</button>
+                    <button>Semi-Finals: March 15-16</button>
+                </div>
+                <h2>🎊 Grand Finale:</h2>
+                <div id='finale_info'>
+                    <button>March 22, 2025</button><br/>
+                    <button>STEM October Campus</button>
+                    <button>Live Streaming Available</button>
+                    <button>Awards Ceremony</button><br/><br/>
+                    <button data-customized='true' style='width: auto'>Special Guest: NASA Engineer Dr. Sarah Chen</button>
+                </div>
+            </div>
+        </div>
+
+        <div id='mission-prep'  class='feature'>
+            <h1>🧑‍🚀 Mission Preparation</h1>
+        </div>
+        <div id='mission-prep2' class='feature'>
+            <p>Teams receive comprehensive training workshops covering space engineering principles, programming fundamentals, and project management skills.</p>
+            <p>Expert mentors from aerospace industry and NASA will guide teams throughout the competition journey.</p>
+            <p>Access to advanced simulation software and testing facilities to validate your designs before the final competition.</p>
+        </div>
+
+        <div class='deeplinking feature'>
+            <h1>🌐 How to Register</h1>
+            <p>
+                Visit our official registration portal at <a href='#registration' target="_blank" >cosmicquest.stemoct.edu</a> to secure your team's spot in this extraordinary competition.
+            </p>
+            <p>
+                Complete your registration early to access exclusive pre-competition workshops and networking events with space industry professionals.
+            </p>
+        </div>
+        <div class='deeplinking feature'>
+            <h1>📞 Contact Mission Control</h1>
+            <p>
+                Questions about Cosmic Quest? Our mission control team is ready to assist!
+            </p>
+            <p style="text-align: center">
+                <img src="images/space_mission_control.png" />
+            </p>
+            <p style="text-align: center">
+                Email: cosmicquest@stemoct.edu<br/>
+                Phone: (555) COSMIC-1<br/>
+                Discord: CosmicQuest2025
+            </p>
+        </div>
+
+        <div class='feature numbering'>
+            <h1>🏅 Judging Criteria</h1>
+            <p>
+                Projects will be evaluated by a panel of aerospace engineers, computer scientists, and NASA representatives based on multiple criteria.
+            </p>
+            <p>
+                <b>Technical Innovation (30%)</b>: Creativity and originality of your solution<br/>
+                <b>Engineering Excellence (25%)</b>: Quality of design and implementation<br/>
+                <b>Mission Success (25%)</b>: How well your project meets the challenge requirements<br/>
+                <b>Presentation (20%)</b>: Communication skills and project documentation
+            </p>
+        </div>
+        <div class='feature slideshow'>
+            <h1>🎥 Media & Documentation</h1>
+            <p>The entire competition will be professionally documented and livestreamed for global audiences.</p>
+            <p>Teams must maintain project blogs and participate in media interviews throughout the competition.</p>
+            <a href='https://youtube.com/cosmicquest2025'><img src='images/space_camera.png' alt='space camera' /></a>
+            <p>Join our social media channels for behind-the-scenes content, team spotlights, and exclusive interviews with space industry professionals!</p>
+        </div>
+
+        <div class='feature flash'>
+            <h1>🚀 SPECIAL FEATURES</h1>
+            <p>Cosmic Quest includes exclusive opportunities that set it apart from other STEM competitions. Winning teams will receive internship opportunities at partnering aerospace companies!</p>
+            <p>Top performers may be invited to NASA's Johnson Space Center for a week-long immersive space program during summer 2025.</p>
+        </div>
+        <div class='feature  wowbook-basic-page flash-demo'>
+            <div style="text-align: center; padding: 50px;">
+                <h2>🌟 Featured Video</h2>
+                <p>Watch last year's Cosmic Quest highlights and see amazing student innovations in action!</p>
+                <div style="background: linear-gradient(45deg, #1e3c72, #2a5298); padding: 20px; border-radius: 10px; color: white;">
+                    <h3>🎬 Competition Highlights Reel</h3>
+                    <p>Amazing robots, innovative designs, and student success stories</p>
+                    <button style="padding: 10px 20px; background: #ff6b35; border: none; border-radius: 5px; color: white; font-weight: bold;">▶ WATCH NOW</button>
+                </div>
+            </div>
+        </div>
+
+        <div class='feature more'>
+            <h1>🌟 and MUCH MORE</h1>
+        </div>
+        <div class='feature more'>
+            <ul>
+                <li>🤝 Industry Partnerships: SpaceX, Blue Origin, NASA, Lockheed Martin</li>
+                <li>🎓 University Scholarship Opportunities for Outstanding Participants</li>
+                <li>🔬 Access to Professional Space Simulation Software</li>
+                <li>👨‍🏫 Mentorship from Aerospace Engineers and Scientists</li>
+                <li>🏆 International Recognition and Media Coverage</li>
+                <li>🚀 Potential Internship Placements at Top Aerospace Companies</li>
+                <li>📚 Exclusive Learning Resources and Space Technology Documentation</li>
+                <li>🌐 Global Network of Space Enthusiasts and Professionals</li>
+            </ul>
+        </div>
+        <div class='last_cover'>
+            <img src="images/cover_last.png" width="100%" height="100%" />
+        </div>
+
+    </div> <!-- features -->
+
+</div>
+<div id='thumbs_holder'>
+</div>
+<footer>
+
+</footer>
+</div> <!--! end of #container -->
+
+<!-- Javascript at the bottom for fast page loading -->
+
+<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="./js/libs/jquery-1.9.1.min.js"%3E%3C/script%3E'))</script>
+
+<script type="text/javascript" src="wow_book.min.js"></script>
+
+<!-- Space Mouse Effect Script -->
+<script>
+class SpaceMouseEffect {
+    constructor() {
+        this.canvas = document.getElementById('space-canvas');
+        this.ctx = this.canvas.getContext('2d');
+        this.stars = [];
+        this.mouse = { x: 0, y: 0 };
+        this.particles = [];
+        
+        this.init();
+        this.bindEvents();
+        this.animate();
+    }
+    
+    init() {
+        this.resize();
+        this.createStars();
+        this.createParticles();
+    }
+    
+    resize() {
+        this.canvas.width = window.innerWidth;
+        this.canvas.height = window.innerHeight;
+    }
+    
+    createStars() {
+        this.stars = [];
+        const starCount = Math.floor((this.canvas.width * this.canvas.height) / 4000);
+        
+        for (let i = 0; i < starCount; i++) {
+            this.stars.push({
+                x: Math.random() * this.canvas.width,
+                y: Math.random() * this.canvas.height,
+                radius: Math.random() * 2 + 0.5,
+                opacity: Math.random() * 0.8 + 0.2,
+                twinkle: Math.random() * 0.02 + 0.01,
+                originalX: 0,
+                originalY: 0,
+                speed: Math.random() * 0.5 + 0.1
+            });
+            
+            this.stars[i].originalX = this.stars[i].x;
+            this.stars[i].originalY = this.stars[i].y;
+        }
+    }
+    
+    createParticles() {
+        this.particles = [];
+        const particleCount = 20;
+        
+        for (let i = 0; i < particleCount; i++) {
+            this.particles.push({
+                x: Math.random() * this.canvas.width,
+                y: Math.random() * this.canvas.height,
+                radius: Math.random() * 3 + 1,
+                color: `hsl(${Math.random() * 60 + 200}, 70%, 60%)`,
+                velocityX: (Math.random() - 0.5) * 0.5,
+                velocityY: (Math.random() - 0.5) * 0.5,
+                opacity: Math.random() * 0.5 + 0.3,
+                pulse: Math.random() * 0.02 + 0.01
+            });
+        }
+    }
+    
+    bindEvents() {
+        window.addEventListener('resize', () => {
+            this.resize();
+            this.createStars();
+            this.createParticles();
+        });
+        
+        document.addEventListener('mousemove', (e) => {
+            this.mouse.x = e.clientX;
+            this.mouse.y = e.clientY;
+        });
+    }
+    
+    animate() {
+        this.ctx.fillStyle = 'rgba(12, 12, 30, 0.1)';
+        this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+        
+        this.animateStars();
+        this.animateParticles();
+        this.drawConnections();
+        
+        requestAnimationFrame(() => this.animate());
+    }
+    
+    animateStars() {
+        const centerX = this.canvas.width / 2;
+        const centerY = this.canvas.height / 2;
+        
+        this.stars.forEach(star => {
+            // Mouse attraction effect
+            const mouseDistanceX = this.mouse.x - star.originalX;
+            const mouseDistanceY = this.mouse.y - star.originalY;
+            const mouseDistance = Math.sqrt(mouseDistanceX * mouseDistanceX + mouseDistanceY * mouseDistanceY);
+            
+            if (mouseDistance < 200) {
+                const force = (200 - mouseDistance) / 200;
+                star.x = star.originalX + mouseDistanceX * force * 0.1;
+                star.y = star.originalY + mouseDistanceY * force * 0.1;
+            } else {
+                // Return to original position
+                star.x += (star.originalX - star.x) * 0.02;
+                star.y += (star.originalY - star.y) * 0.02;
+            }
+            
+            // Twinkling effect
+            star.opacity += Math.sin(Date.now() * star.twinkle) * 0.1;
+            star.opacity = Math.max(0.1, Math.min(1, star.opacity));
+            
+            // Draw star
+            this.ctx.beginPath();
+            this.ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+            this.ctx.fillStyle = `rgba(255, 255, 255, ${star.opacity})`;
+            this.ctx.fill();
+            
+            // Add glow effect for larger stars
+            if (star.radius > 1.5) {
+                this.ctx.beginPath();
+                this.ctx.arc(star.x, star.y, star.radius * 2, 0, Math.PI * 2);
+                this.ctx.fillStyle = `rgba(255, 255, 255, ${star.opacity * 0.2})`;
+                this.ctx.fill();
+            }
+        });
+    }
+    
+    animateParticles() {
+        this.particles.forEach(particle => {
+            // Update position
+            particle.x += particle.velocityX;
+            particle.y += particle.velocityY;
+            
+            // Wrap around edges
+            if (particle.x < 0) particle.x = this.canvas.width;
+            if (particle.x > this.canvas.width) particle.x = 0;
+            if (particle.y < 0) particle.y = this.canvas.height;
+            if (particle.y > this.canvas.height) particle.y = 0;
+            
+            // Mouse interaction
+            const mouseDistanceX = this.mouse.x - particle.x;
+            const mouseDistanceY = this.mouse.y - particle.y;
+            const mouseDistance = Math.sqrt(mouseDistanceX * mouseDistanceX + mouseDistanceY * mouseDistanceY);
+            
+            if (mouseDistance < 150) {
+                const force = (150 - mouseDistance) / 150;
+                particle.x -= mouseDistanceX * force * 0.01;
+                particle.y -= mouseDistanceY * force * 0.01;
+            }
+            
+            // Pulsing effect
+            particle.opacity += Math.sin(Date.now() * particle.pulse) * 0.1;
+            particle.opacity = Math.max(0.1, Math.min(0.8, particle.opacity));
+            
+            // Draw particle
+            this.ctx.beginPath();
+            this.ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+            this.ctx.fillStyle = particle.color.replace('60%)', `${particle.opacity * 60}%)`);
+            this.ctx.fill();
+            
+            // Add glow
+            this.ctx.beginPath();
+            this.ctx.arc(particle.x, particle.y, particle.radius * 3, 0, Math.PI * 2);
+            this.ctx.fillStyle = particle.color.replace('60%)', `${particle.opacity * 10}%)`);
+            this.ctx.fill();
+        });
+    }
+    
+    drawConnections() {
+        // Draw connections between nearby particles and stars
+        for (let i = 0; i < this.particles.length; i++) {
+            for (let j = i + 1; j < this.particles.length; j++) {
+                const dx = this.particles[i].x - this.particles[j].x;
+                const dy = this.particles[i].y - this.particles[j].y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                
+                if (distance < 100) {
+                    const opacity = (100 - distance) / 100 * 0.3;
+                    this.ctx.beginPath();
+                    this.ctx.moveTo(this.particles[i].x, this.particles[i].y);
+                    this.ctx.lineTo(this.particles[j].x, this.particles[j].y);
+                    this.ctx.strokeStyle = `rgba(100, 150, 255, ${opacity})`;
+                    this.ctx.lineWidth = 0.5;
+                    this.ctx.stroke();
+                }
+            }
+        }
+        
+        // Mouse connection effect
+        this.particles.forEach(particle => {
+            const dx = this.mouse.x - particle.x;
+            const dy = this.mouse.y - particle.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            
+            if (distance < 120) {
+                const opacity = (120 - distance) / 120 * 0.5;
+                this.ctx.beginPath();
+                this.ctx.moveTo(particle.x, particle.y);
+                this.ctx.lineTo(this.mouse.x, this.mouse.y);
+                this.ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`;
+                this.ctx.lineWidth = 1;
+                this.ctx.stroke();
+            }
+        });
+    }
+}
+
+// Initialize the space effect when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    new SpaceMouseEffect();
+});
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#features').wowBook({
+            height : 500
+            ,width  : 800
+            ,centeredWhenClosed : true
+            ,hardcovers : true
+            ,turnPageDuration : 1000
+            ,numberedPages : [1,-2]
+            ,controls : {
+                zoomIn    : '#zoomin',
+                zoomOut   : '#zoomout',
+                next      : '#next',
+                back      : '#back',
+                first     : '#first',
+                last      : '#last',
+                slideShow : '#slideshow',
+                flipSound : '#flipsound',
+                thumbnails : '#thumbs',
+                fullscreen : '#fullscreen'
+            }
+            ,scaleToFit: "#container"
+            ,thumbnailsPosition : 'bottom'
+            ,onFullscreenError : function(){
+                var msg="Fullscreen failed.";
+                if (self!=top) msg="The frame is blocking full screen mode. Click on 'remove frame' button above and try to go full screen again."
+                alert(msg);
+            }
+        }).css({'display':'none', 'margin':'auto'}).fadeIn(1000);
+
+        $("#cover").click(function(){
+            $.wowBook("#features").advance();
+        });
+
+        var book = $.wowBook("#features");
+
+        function rebuildThumbnails(){
+            book.destroyThumbnails()
+            book.showThumbnails()
+            $("#thumbs_holder").css("marginTop", -$("#thumbs_holder").height()/2)
+        }
+        $("#thumbs_position button").on("click", function(){
+            var position = $(this).text().toLowerCase()
+            if ($(this).data("customized")) {
+                position = "top"
+                book.opts.thumbnailsParent = "#thumbs_holder";
+            } else {
+                book.opts.thumbnailsParent = "body";
+            }
+            book.opts.thumbnailsPosition = position
+            rebuildThumbnails();
+        })
+        $("#thumb_automatic").click(function(){
+            book.opts.thumbnailsSprite = null
+            book.opts.thumbnailWidth = null
+            rebuildThumbnails();
+        })
+        $("#thumb_sprite").click(function(){
+            book.opts.thumbnailsSprite = "images/thumbs.jpg"
+            book.opts.thumbnailWidth = 136
+            rebuildThumbnails();
+        })
+        $("#thumbs_size button").click(function(){
+            var factor = 0.02*( $(this).index() ? -1 : 1 );
+            book.opts.thumbnailScale = book.opts.thumbnailScale + factor;
+            rebuildThumbnails();
+        })
+
+    });
+</script>
+
+<!-- scripts concatenated and minified via ant build script-->
+<script src="js/plugins.js"></script>
+<script src="js/script.js"></script>
+<!-- end concatenated and minified scripts-->
+
+<!--[if lt IE 7 ]>
+<script src="js/dd_belatedpng.js"></script>
+<script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>
+<![endif]-->
+
+</body>
+</html>
