@@ -140,7 +140,7 @@
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
         }
 
-        /* Table of Contents Styles */
+        /* Table of Contents Styles - UPDATED FOR SCROLLING */
         .toc-container {
             background: rgba(13, 13, 39, 0.3);
             backdrop-filter: blur(10px);
@@ -149,6 +149,36 @@
             margin: 20px 0;
             border: 2px solid rgba(103, 126, 234, 0.4);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            /* ADDED SCROLLING PROPERTIES */
+            max-height: 450px; /* Limit the container height */
+            overflow-y: auto; /* Enable vertical scrolling */
+            overflow-x: hidden; /* Hide horizontal scrolling */
+        }
+
+        /* CUSTOM SCROLLBAR STYLING */
+        .toc-container::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .toc-container::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        .toc-container::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, rgba(103, 126, 234, 0.6), rgba(118, 75, 162, 0.6));
+            border-radius: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .toc-container::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, rgba(103, 126, 234, 0.8), rgba(118, 75, 162, 0.8));
+        }
+
+        /* Firefox scrollbar styling */
+        .toc-container {
+            scrollbar-width: thin;
+            scrollbar-color: rgba(103, 126, 234, 0.6) rgba(255, 255, 255, 0.1);
         }
 
         .toc-list {
@@ -313,6 +343,7 @@
             .toc-container {
                 padding: 15px;
                 margin: 15px 0;
+                max-height: 350px; /* Smaller height on mobile */
             }
             
             .toc-link {
@@ -388,95 +419,130 @@
                 </div>
             </div>
         </div>
-
+</div>
         <!-- Table of Contents -->
         <div class='feature pagefx softpage' style="background-image: url(images/image.png); background-repeat: no-repeat; background-size: cover;">
-            <h1>Table of Contents</h1>
-            <div class='subtitle'>Navigate Your Cosmic Journey</div>
+            <h1 style="margin-top: 0px !important; margin-bottom: 0px !important;">Table of Contents</h1>
+            <div class='subtitle' style="margin-top: 0px !important; margin-bottom: 0px !important;">Navigate Your Cosmic Journey</div>
             
-            <div class="toc-container">
-                <ul class="toc-list">
-                    <li class="toc-item">
-                        <a href="#" class="toc-link" data-page="3">
+            <div class="toc-container" style="padding-top: 0px;">
+                <ul class="toc-list" style="padding-top: 0px;">
+                    <li class="toc-item" style="margin-top: 0px !important; margin-bottom: 0px !important;">
+                        <a href="#" class="toc-link" data-page="3" style="margin-top: 0px !important; margin-bottom: 0px !important;">
                             Welcome to COSMIC QUEST
-                            <span class="toc-page-number">Page 3</span>
-                            <div class="toc-description">Introduction and mission</div>
+                            <span class="toc-page-number" style="margin-top: 0px !important; margin-bottom: 0px !important;">Page 3</span>
+                            <div class="toc-description" style="margin-top: 0px !important; margin-bottom: 0px !important;">Introduction & Eligibility</div>
                         </a>
                     </li>
-                    <li class="toc-item">
-                        <a href="#" class="toc-link" data-page="4">
+                    <li class="toc-item" style="padding-top: 0px;margin-top: 0px !important; margin-bottom: 0px !important;">
+                        <a href="#" class="toc-link" data-page="4" style="margin-top: 0px !important; margin-bottom: 0px !important;">
                             Core Topics - Part 1
-                            <span class="toc-page-number">Page 4</span>
-                            <div class="toc-description">Astronomy, Stellar & Planetary Science</div>
+                            <span class="toc-page-number" style="margin-top: 0px !important; margin-bottom: 0px !important;">Page 4</span>
+                            <div class="toc-description"style="margin-top: 0px !important; margin-bottom: 0px !important;">Core Competition Topics 1</div>
                         </a>
                     </li>
-                    <li class="toc-item">
-                        <a href="#" class="toc-link" data-page="5">
+                    <li class="toc-item" style="margin-top: 0px !important; margin-bottom: 0px !important;">
+                        <a href="#" class="toc-link" data-page="5"style="margin-top: 0px !important; margin-bottom: 0px !important;">
                             Core Topics - Part 2
-                            <span class="toc-page-number">Page 5</span>
-                            <div class="toc-description">Galactic & Cosmology</div>
+                            <span class="toc-page-number"style="margin-top: 0px !important; margin-bottom: 0px !important;">Page 5</span>
+                            <div class="toc-description"style="margin-top: 0px !important; margin-bottom: 0px !important;">Core Competition Topics 2</div>
                         </a>
                     </li>
-                    <li class="toc-item">
-                        <a href="#" class="toc-link" data-page="6">
+                    <li class="toc-item" style="margin-top: 0px !important; margin-bottom: 0px !important;">
+                        <a href="#" class="toc-link" data-page="6"style="margin-top: 0px !important; margin-bottom: 0px !important;">
                             Competition Structure
-                            <span class="toc-page-number">Page 6</span>
-                            <div class="toc-description">How to participate</div>
+                            <span class="toc-page-number"style="margin-top: 0px !important; margin-bottom: 0px !important;">Page 6</span>
+                            <div class="toc-description"style="margin-top: 0px !important; margin-bottom: 0px !important;">How to participate</div>
                         </a>
                     </li>
-                    <li class="toc-item">
-                        <a href="#" class="toc-link" data-page="7">
+                    <li class="toc-item" style="margin-top: 0px !important; margin-bottom: 0px !important;">
+                        <a href="#" class="toc-link" data-page="7"style="margin-top: 0px !important; margin-bottom: 0px !important;">
                             First Round Details
-                            <span class="toc-page-number">Page 7</span>
-                            <div class="toc-description">Open round format</div>
+                            <span class="toc-page-number"style="margin-top: 0px !important; margin-bottom: 0px !important;">Page 7</span>
+                            <div class="toc-description"style="margin-top: 0px !important; margin-bottom: 0px !important;">First Round: Open Round</div>
                         </a>
                     </li>
-                    <li class="toc-item">
-                        <a href="#" class="toc-link" data-page="8">
+                    <li class="toc-item" style="margin-top: 0px !important; margin-bottom: 0px !important;">
+                        <a href="#" class="toc-link" data-page="8"style="margin-top: 0px !important; margin-bottom: 0px !important;">
                             Second Round Details
-                            <span class="toc-page-number">Page 8</span>
-                            <div class="toc-description">Invitational final challenge</div>
+                            <span class="toc-page-number"style="margin-top: 0px !important; margin-bottom: 0px !important;">Page 8</span>
+                            <div class="toc-description"style="margin-top: 0px !important; margin-bottom: 0px !important;">Second Round: Invitational Round</div>
                         </a>
                     </li>
-                    <li class="toc-item">
-                        <a href="#" class="toc-link" data-page="9">
+                    <li class="toc-item" style="margin-top: 0px !important; margin-bottom: 0px !important;">
+                        <a href="#" class="toc-link" data-page="9"style="margin-top: 0px !important; margin-bottom: 0px !important;">
                             Team Formation & Rules
-                            <span class="toc-page-number">Page 9</span>
-                            <div class="toc-description">Guidelines for participation</div>
+                            <span class="toc-page-number"style="margin-top: 0px !important; margin-bottom: 0px !important;">Page 9</span>
+                            <div class="toc-description"style="margin-top: 0px !important; margin-bottom: 0px !important;">Team Formation & Rules</div>
                         </a>
                     </li>
-                    <li class="toc-item">
-                        <a href="#" class="toc-link" data-page="10">
+                    <li class="toc-item" style="margin-top: 0px !important; margin-bottom: 0px !important;">
+                        <a href="#" class="toc-link" data-page="10"style="margin-top: 0px !important; margin-bottom: 0px !important;">
                             Communication Rules
-                            <span class="toc-page-number">Page 10</span>
-                            <div class="toc-description">Academic integrity guidelines</div>
+                            <span class="toc-page-number"style="margin-top: 0px !important; margin-bottom: 0px !important;">Page 10</span>
+                            <div class="toc-description"style="margin-top: 0px !important; margin-bottom: 0px !important;">Some specific guidelines</div>
                         </a>
                     </li>
-                    <li class="toc-item">
-                        <a href="#" class="toc-link" data-page="11">
+                    <li class="toc-item" style="margin-top: 0px !important; margin-bottom: 0px !important;">
+                        <a href="#" class="toc-link" data-page="11"style="margin-top: 0px !important; margin-bottom: 0px !important;">
                             Timeline & Key Dates
-                            <span class="toc-page-number">Page 11</span>
-                            <div class="toc-description">Important deadlines</div>
+                            <span class="toc-page-number"style="margin-top: 0px !important; margin-bottom: 0px !important;">Page 11</span>
+                            <div class="toc-description"style="margin-top: 0px !important; margin-bottom: 0px !important;">Important deadlines</div>
                         </a>
                     </li>
-                    <li class="toc-item">
-                        <a href="#" class="toc-link" data-page="13">
-                            Prizes & Recognition
-                            <span class="toc-page-number">Page 13</span>
-                            <div class="toc-description">Awards and achievements</div>
+                    <li class="toc-item" style="margin-top: 0px !important; margin-bottom: 0px !important;">
+                        <a href="#" class="toc-link" data-page="12"style="margin-top: 0px !important; margin-bottom: 0px !important;">
+                            Timeline Continued
+                            <span class="toc-page-number"style="margin-top: 0px !important; margin-bottom: 0px !important;">Page 12</span>
+                            <div class="toc-description"style="margin-top: 0px !important; margin-bottom: 0px !important;">Important deadline continued</div>
                         </a>
                     </li>
-                    <li class="toc-item">
-                        <a href="#" class="toc-link" data-page="14">
+                    <li class="toc-item" style="margin-top: 0px !important; margin-bottom: 0px !important;">
+                        <a href="#" class="toc-link" data-page="13"style="margin-top: 0px !important; margin-bottom: 0px !important;">
+                            Prizes
+                            <span class="toc-page-number"style="margin-top: 0px !important; margin-bottom: 0px !important;">Page 13</span>
+                            <div class="toc-description"style="margin-top: 0px !important; margin-bottom: 0px !important;">Awards</div>
+                        </a>
+                    </li>
+                    <li class="toc-item" style="margin-top: 0px !important; margin-bottom: 0px !important;">
+                        <a href="#" class="toc-link" data-page="14"style="margin-top: 0px !important; margin-bottom: 0px !important;">
                             Contact Information
-                            <span class="toc-page-number">Page 14</span>
-                            <div class="toc-description">Get in touch with us</div>
+                            <span class="toc-page-number"style="margin-top: 0px !important; margin-bottom: 0px !important;">Page 14</span>
+                            <div class="toc-description"style="margin-top: 0px !important; margin-bottom: 0px !important;">Get in touch with us</div>
                         </a>
                     </li>
+                    <li class="toc-item" style="margin-top: 0px !important; margin-bottom: 0px !important;">
+                        <a href="#" class="toc-link" data-page="15"style="margin-top: 0px !important; margin-bottom: 0px !important;">
+                            Ready to Begin Your Cosmic Journey?!
+                            <span class="toc-page-number"style="margin-top: 0px !important; margin-bottom: 0px !important;">Page 15</span>
+                            <div class="toc-description"style="margin-top: 0px !important; margin-bottom: 0px !important;">Come Join Us</div>
+                        </a>
+                    </li>
+                    <li class="toc-item" style="margin-top: 0px !important; margin-bottom: 0px !important;">
+                        <a href="#" class="toc-link" data-page="16"style="margin-top: 0px !important; margin-bottom: 0px !important;">
+                            We are waiting for your participation
+                            <span class="toc-page-number"style="margin-top: 0px !important; margin-bottom: 0px !important;">Page 16</span>
+                            <div class="toc-description"style="margin-top: 0px !important; margin-bottom: 0px !important;">The Universe Awaits</div>
+                        </a>
+                    </li>
+                    <!--
+                    <li class="toc-item" style="margin-top: 0px !important; margin-bottom: 0px !important;">
+                        <a href="#" class="toc-link" data-page="17"style="margin-top: 0px !important; margin-bottom: 0px !important;">
+                            Past Winners Gallery
+                            <span class="toc-page-number"style="margin-top: 0px !important; margin-bottom: 0px !important;">Page 17</span>
+                            <div class="toc-description"style="margin-top: 0px !important; margin-bottom: 0px !important;">Celebrating previous champions</div>
+                        </a>
+                    </li>
+                    <li class="toc-item" style="margin-top: 0px !important; margin-bottom: 0px !important;">
+                        <a href="#" class="toc-link" data-page="18"style="margin-top: 0px !important; margin-bottom: 0px !important;">
+                            Acknowledgments
+                            <span class="toc-page-number"style="margin-top: 0px !important; margin-bottom: 0px !important;">Page 18</span>
+                            <div class="toc-description"style="margin-top: 0px !important; margin-bottom: 0px !important;">Special thanks and credits</div>
+                        </a>
+                    </li>-->
                 </ul>
             </div>
         </div>
-</div>
         <!-- Introduction -->
         <div class='feature pagefx softpage' style="background-image: url(images/image.png); background-repeat: no-repeat; background-size: cover;">
             <h1>Welcome to COSMIC QUEST</h1>
@@ -740,8 +806,8 @@
         <div class='feature pagefx softpage' style="background-image: url(images/image.png); background-repeat: no-repeat; background-size: cover;">
             <h1>Ready to Begin Your Cosmic Journey?</h1>
             
-            <div class="prize-box" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                <h2>Join thousands of students from around the world!</h2>
+            <div class="prize-box" style="background: linear-gradient(135deg, #9caaec 0%, #b685e8 100%);">
+                <h2 style="color: #73e3eb !important;">Join thousands of students from around the world!</h2>
                 <p style="font-size: 1.3rem; margin: 20px 0;">COSMIC QUEST awaits your team's astronomical knowledge and passion for space science.</p>
                 <div style="font-size: 1.1rem; margin-top: 25px;">
                     <p> Challenge your mind</p>
