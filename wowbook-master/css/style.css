@@ -277,7 +277,7 @@ nav {
   text-align: center; }
   nav ul {
     padding: 0;
-    bborder-width: 1px;
+    border-width: 1px;
     border-style: solid;
     border-color: #d5d5d5 #d2d2d2 #cdcdcd;
     border-radius: 6px;

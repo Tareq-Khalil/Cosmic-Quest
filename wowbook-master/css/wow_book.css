@@ -118,30 +118,25 @@ img.wowbook-lazy {
 .wowbook-fold-gradient-flipped {
 	background-image :  url(../images/fold_gradient_flip_h.png);
 }
-
 .wowbook-fold-gradient-container {
 	position : absolute;
 	z-index  : 1001; /* 1 a mais que o verso da pagina sendo foldada */
 }
-
 .wowbook-gutter-shadow {
 	height     : 100%;
 	width      : 40px;
 	position   : absolute;
 	top        : 0;
 }
-
 .wowbook-left .wowbook-gutter-shadow {
 	background : url(./images/gutter_shadow_left.png) right top repeat-y;
 	right      : 0;
 	width      : 70px;
 }
-
 .wowbook-right .wowbook-gutter-shadow {
 	background : url(./images/gutter_shadow_right.png) right top repeat-y;
 	left       : 0;
 }
-
 .wowbook-hard-page-shadow {
 	background : #888;
 	position   : absolute;

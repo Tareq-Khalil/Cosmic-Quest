@@ -11,7 +11,7 @@
     <meta charset="utf-8">
     <style>
         .js #features {
-            margin-left: -12000px; width: 100%;
+            margin-left: -12000px; width: 100%; 
         }
         
         /* Space Mouse Effect Styles */
@@ -27,6 +27,7 @@
         
         body {
             background: transparent;
+            font-family: 'News Cycle', Arial, sans-serif;
         }
         
         #container {
@@ -42,18 +43,22 @@
         
         /* Make navigation more visible */
         nav {
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-            border-radius: 10px;
-            padding: 10px;
-            margin-bottom: 20px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(15px);
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
         }
         
         nav ul {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 12px;
             justify-content: center;
+            margin: 0;
+            padding: 0;
         }
         
         nav li {
@@ -63,30 +68,274 @@
         nav a {
             color: #fff;
             text-decoration: none;
-            padding: 8px 15px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 5px;
+            padding: 10px 18px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
             transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         
         nav a:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
         }
-        p{
-            font-size:1rem !important;
+
+        /* Enhanced typography and spacing */
+        .feature {
+            padding: 20px !important;
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 580px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            box-shadow: inset 0 0 50px rgba(255, 255, 255, 0.1);
         }
-        h1{
-            font-size:1.6rem !important;
+
+        .feature h1 {
+            font-size: 2.2rem !important;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #ffffff ;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .feature h2 {
+            font-size: 1.6rem !important;
+            color: #717bef !important;
+            margin: 15px 0 10px 0;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        .feature h3 {
+            font-size: 1.3rem !important;
+            color: #55c3c3 !important;
+            margin: 12px 0 8px 0;
+            font-weight: 500;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+        }
+
+        .feature p {
+            font-size: 1rem !important;
+            margin-bottom: 10px;
+            text-align: justify;
+            color: #f0f8ff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .feature .subtitle {
+            font-size: 1.2rem !important;
+            color: #73c3ed !important;
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Table of Contents Styles */
+        .toc-container {
+            background: rgba(13, 13, 39, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 2px solid rgba(103, 126, 234, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc-item {
+            margin: 0 0 12px 0;
+            padding: 0;
+        }
+
+        .toc-link {
+            display: block;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, rgba(103, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        .toc-link:hover {
+            background: linear-gradient(135deg, rgba(103, 126, 234, 0.4), rgba(118, 75, 162, 0.4));
+            transform: translateX(10px);
+            box-shadow: 0 5px 20px rgba(103, 126, 234, 0.3);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .toc-page-number {
+            float: right;
+            color: #8b9ff9;
+            font-weight: 600;
+        }
+
+        .toc-description {
+            font-size: 0.9rem;
+            color: #b8c5f2;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        /* Special styling for competition sections */
+        .competition-highlight {
+            background: rgba(102, 126, 234, 0.2);
+            border-left: 4px solid #667eea;
+            padding: 12px 15px;
+            margin: 10px 0;
+            border-radius: 6px;
+            backdrop-filter: blur(5px);
+        }
+
+        .date-box {
+            background: rgba(255, 107, 107, 0.3);
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 10px 0;
+            font-weight: bold;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .rules-box {
+            background: rgba(168, 230, 207, 0.2);
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border: 1px solid rgba(95, 158, 160, 0.5);
+            backdrop-filter: blur(5px);
+        }
+
+        .prize-box {
+            background: rgba(25, 84, 123, 0.3);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 10px 0;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Enhanced list styling */
+        .feature ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 8px 0;
+        }
+
+        .feature ul li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 6px;
+            font-size: 1rem;
+            color: #f0f8ff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .feature ul li:before {
+            content: "-";
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /* Box content styling */
+        .competition-highlight h2,
+        .competition-highlight h3,
+        .date-box h2,
+        .date-box h3,
+        .rules-box h2,
+        .rules-box h3,
+        .prize-box h2,
+        .prize-box h3 {
+            margin-top: 8px !important;
+            margin-bottom: 8px !important;
+        }
+
+        .competition-highlight p,
+        .date-box p,
+        .rules-box p,
+        .prize-box p {
+            margin-bottom: 8px !important;
+        }
+
+        /* Special icon classes */
+        .icon-large {
+            font-size: 3rem;
+            text-align: center;
+            margin: 20px 0;
+            display: block;
+        }
+
+        /* Responsive improvements */
+        @media (max-width: 768px) {
+            nav {
+                padding: 10px;
+                margin-bottom: 20px;
+            }
+            
+            nav a {
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+            
+            .feature {
+                padding: 15px !important;
+                min-height: 500px;
+            }
+            
+            .feature h1 {
+                font-size: 1.8rem !important;
+            }
+            
+            .toc-container {
+                padding: 15px;
+                margin: 15px 0;
+            }
+            
+            .toc-link {
+                padding: 12px 15px;
+                font-size: 1rem;
+            }
+            
+            .competition-highlight,
+            .date-box,
+            .rules-box,
+            .prize-box {
+                padding: 10px 12px;
+                margin: 8px 0;
+            }
         }
     </style>
     <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
        Remove this if you use the .htaccess -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>Cosmic Quest</title>
-    <meta name="description" content="">
-    <meta name="author" content="Tareq Khalil">
+    <title>Cosmic Quest - International Astronomy Competition</title>
+    <meta name="description" content="COSMIC QUEST - International astronomy competition for high school students">
+    <meta name="author" content="STEM October Astronomy Club">
 
     <!--  Mobile viewport optimized: j.mp/bplateviewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -94,10 +343,9 @@
     <!-- CSS : implied media="all" -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/wow_book.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="css/preview.css"><!-- Uncomment if you are specifically targeting less enabled mobile browsers
-	<link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
+    <link rel="stylesheet" type="text/css" href="css/preview.css">
 
-    <link href='//fonts.googleapis.com/css?family=News+Cycle' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=News+Cycle:400,700|Orbitron:400,700,900' rel='stylesheet' type='text/css'>
     <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
     <script src="js/modernizr-1.6.min.js"></script>
 
@@ -127,194 +375,405 @@
     <div id='features'>
         <div id='cover'>
         </div>
-
-        <div class='feature pagefx hardpage'>
-            <p class='subtitle'>STEM October Presents</p>
-            <h1>COSMIC QUEST</h1>
-            <p>🚀 The Ultimate Space Exploration Challenge 🌟</p>
-            <p>Join us for an extraordinary journey through the cosmos! Cosmic Quest is an innovative STEM competition that challenges students to design, build, and program solutions for space exploration missions.
-            </p>
-            <br/>
-            <h1>Mission Launch: March 2025</h1>
-            <p>Teams will tackle real-world space challenges including satellite design, Mars rover programming, and asteroid mining simulations. Prize pool of $10,000 awaits the most innovative cosmic explorers!</p>
-        </div>
-        <div class='feature pagefx softpage'>
-            <a href="https://hc-cdn.hel1.your-objectstorage.com/s/v3/a960baa12e1412ad8a315de557250d1770bce2e4_vid-20250303-wa0031.mp4"><video src="No video description...-fdown.net.mp4" style="margin-top: auto; margin-bottom: auto; margin-left: auto; margin-right: auto; width: 100%; height: 100%;"></video></a>
-            
-        </div>
-
-        <div class='responsive feature'>
-            <h1 style="text-align: center; margin-top: 50%; margin-bottom: 50%; margin-left: 20%; margin-right: 50%; width: 50%; display: block;">COSMIC QUEST CHALLENGES</h1>
-            <div class='subtitle'>🌌 Four Epic Missions Await 🌌</div>
-            
-        </div>
-        <div class='responsive feature'> 
-            <h2>🛰️ Mission 1: Satellite Design Challenge</h2>
-            <p>
-                <b>Design and build</b> a functional <b>communication satellite</b> capable of transmitting data across vast distances. Teams must consider power management, signal strength, and orbital mechanics in their innovative designs.
-            </p>
-            <p>
-            <p>
-                Your satellite must demonstrate <b>autonomous positioning systems</b> and withstand simulated space conditions including radiation and temperature extremes.
-            </p>
-           
-        </div>
-        <div class='responsive feature'>
-             <p>Teams will receive advanced <b>microcontrollers and sensors</b> to create their satellite systems, with bonus points awarded for innovative communication protocols and energy-efficient designs.
-            </p>
-            <h2>🔴 Mission 2: Mars Rover Programming</h2>
-            <h3>Navigate the Red Planet</h3>
-            <p>
-                Program an autonomous rover to navigate challenging Martian terrain, collect samples, and transmit scientific data back to Earth.            </p>
-        </div>
-        <div class='responsive feature'>
-            <p>
-                Your rover must demonstrate <b>intelligent pathfinding</b>, obstacle avoidance, and precise sample collection using computer vision and machine learning algorithms.            </p>
-                <br><h3>⚡ Mission 3: Space Station Power Systems</h3>
-                <p>Design a <b>sustainable power grid</b> for a space station using solar panels, fuel cells, and energy storage systems. Teams must balance <b>power generation and consumption</b> while maintaining life support systems during solar eclipses and equipment malfunctions.</p>
-        </div>
-        <div class='responsive feature'>
-            <h2>💎 Mission 4: Asteroid Mining Operation</h2>
-            <h3>Extract Precious Resources</h3>
-            <p>Program robotic mining equipment to <b>identify and extract valuable minerals</b> from simulated asteroids. Teams must develop efficient mining strategies while managing limited fuel and equipment durability.</p>                
-            <br>
-            <h3>🏆 Competition Timeline & Prizes</h3>
-                <p>Registration opens January 15th, 2025. Teams of <b>3-5 students</b> will compete through</p>
-        </div>
-        <div class="responsive feature">
-            <p>qualifying rounds, semi-finals, and the grand finale. <b>First Place: $5,000</b> | <b>Second Place: $3,000</b> | <b>Third Place: $2,000</b>. Special recognition awards for <b>Most Innovative Design</b>, <b>Best Teamwork</b>, and <b>Outstanding Programming</b> with additional prizes of $500 each!</p>
-        </div>
-
-        <div class='feature design'>
-            <h1>🎯 REGISTRATION</h1>
-            <div class='subtitle'>Join the Cosmic Adventure</div>
-        </div>
-        <div class='feature design'>
-            <p>
-                Ready to embark on your space mission? Register your team today and receive exclusive access to training materials, expert workshops, and cutting-edge development tools.
-            </p>
-        </div>
-
-        <div class='thumbnails feature'>
-            <h1>🚀 Requirements & Equipment</h1>
-            <p>All teams receive professional-grade equipment including microcontrollers, sensors, and development boards.</p>
-            <h2>📋 Team Requirements:</h2>
-            <p>Teams must consist of 3-5 students from grades 9-12. At least one member should have programming experience in Python, C++, or Arduino IDE.</p>
-            <p>Each team needs a faculty advisor and must submit a project proposal by February 1st, 2025.</p>
-            <h2>🛠️ Provided Equipment:</h2>
-            <p>
-                Arduino/Raspberry Pi kits, sensors (GPS, accelerometer, camera modules), communication modules, building materials, and access to 3D printing facilities. Teams may also bring additional components with prior approval.
-            </p>
-        </div>
-        <div class='thumbnails feature' >
-            <div style='padding-left: 1em'>
-                <h2>📅 Important Dates:</h2>
-                <div id='cosmic_dates'>
-                    <button>Registration Opens: Jan 15, 2025</button>
-                    <button>Proposal Deadline: Feb 1, 2025</button>
-                </div>
-                <h2>🏁 Competition Phases:</h2>
-                <p>Three intensive phases leading to the grand finale.</p>
-                <div id='competition_phases'>
-                    <button>Qualifying Round: March 1-7</button>
-                    <button>Semi-Finals: March 15-16</button>
-                </div>
-                <h2>🎊 Grand Finale:</h2>
-                <div id='finale_info'>
-                    <button>March 22, 2025</button><br/>
-                    <button>STEM October Campus</button>
-                    <button>Live Streaming Available</button>
-                    <button>Awards Ceremony</button><br/><br/>
-                    <button data-customized='true' style='width: auto'>Special Guest: NASA Engineer Dr. Sarah Chen</button>
+<div style="background-image: url(images/images.png);">
+        <!-- Title Page -->
+        <div class='feature pagefx hardpage'style="background-image: url(images/images.png); background-repeat: no-repeat; background-size: cover;" >
+            <div style="text-align: center; padding: 40px 20px;">
+                <div class='subtitle'>STEM October Astronomy Club Presents</div>
+                <h1 style="font-size: 3rem !important; margin: 30px 0;">COSMIC QUEST</h1>
+                <p style="font-size: 1.2rem; margin-top: 30px;">Join us on an extraordinary journey through the cosmos! Challenge your knowledge of astronomy and astrophysics in this exciting two-round competition.</p>
+                <div class="date-box" style="margin-top: 40px;">
+                    <div style="font-size: 1.3rem;">Registration Opens</div>
+                    <div style="font-size: 1.8rem; margin-top: 5px; ">August 15, 2025</div>
                 </div>
             </div>
         </div>
 
-        <div id='mission-prep'  class='feature'>
-            <h1>🧑‍🚀 Mission Preparation</h1>
+        <!-- Table of Contents -->
+        <div class='feature pagefx softpage' style="background-image: url(images/images.png); background-repeat: no-repeat; background-size: cover;">
+            <h1>Table of Contents</h1>
+            <div class='subtitle'>Navigate Your Cosmic Journey</div>
+            
+            <div class="toc-container">
+                <ul class="toc-list">
+                    <li class="toc-item">
+                        <a href="#" class="toc-link" data-page="3">
+                            Welcome to COSMIC QUEST
+                            <span class="toc-page-number">Page 3</span>
+                            <div class="toc-description">Introduction and mission</div>
+                        </a>
+                    </li>
+                    <li class="toc-item">
+                        <a href="#" class="toc-link" data-page="4">
+                            Core Topics - Part 1
+                            <span class="toc-page-number">Page 4</span>
+                            <div class="toc-description">Astronomy, Stellar & Planetary Science</div>
+                        </a>
+                    </li>
+                    <li class="toc-item">
+                        <a href="#" class="toc-link" data-page="5">
+                            Core Topics - Part 2
+                            <span class="toc-page-number">Page 5</span>
+                            <div class="toc-description">Galactic & Cosmology</div>
+                        </a>
+                    </li>
+                    <li class="toc-item">
+                        <a href="#" class="toc-link" data-page="6">
+                            Competition Structure
+                            <span class="toc-page-number">Page 6</span>
+                            <div class="toc-description">How to participate</div>
+                        </a>
+                    </li>
+                    <li class="toc-item">
+                        <a href="#" class="toc-link" data-page="7">
+                            First Round Details
+                            <span class="toc-page-number">Page 7</span>
+                            <div class="toc-description">Open round format</div>
+                        </a>
+                    </li>
+                    <li class="toc-item">
+                        <a href="#" class="toc-link" data-page="8">
+                            Second Round Details
+                            <span class="toc-page-number">Page 8</span>
+                            <div class="toc-description">Invitational final challenge</div>
+                        </a>
+                    </li>
+                    <li class="toc-item">
+                        <a href="#" class="toc-link" data-page="9">
+                            Team Formation & Rules
+                            <span class="toc-page-number">Page 9</span>
+                            <div class="toc-description">Guidelines for participation</div>
+                        </a>
+                    </li>
+                    <li class="toc-item">
+                        <a href="#" class="toc-link" data-page="10">
+                            Communication Rules
+                            <span class="toc-page-number">Page 10</span>
+                            <div class="toc-description">Academic integrity guidelines</div>
+                        </a>
+                    </li>
+                    <li class="toc-item">
+                        <a href="#" class="toc-link" data-page="11">
+                            Timeline & Key Dates
+                            <span class="toc-page-number">Page 11</span>
+                            <div class="toc-description">Important deadlines</div>
+                        </a>
+                    </li>
+                    <li class="toc-item">
+                        <a href="#" class="toc-link" data-page="13">
+                            Prizes & Recognition
+                            <span class="toc-page-number">Page 13</span>
+                            <div class="toc-description">Awards and achievements</div>
+                        </a>
+                    </li>
+                    <li class="toc-item">
+                        <a href="#" class="toc-link" data-page="14">
+                            Contact Information
+                            <span class="toc-page-number">Page 14</span>
+                            <div class="toc-description">Get in touch with us</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div id='mission-prep2' class='feature'>
-            <p>Teams receive comprehensive training workshops covering space engineering principles, programming fundamentals, and project management skills.</p>
-            <p>Expert mentors from aerospace industry and NASA will guide teams throughout the competition journey.</p>
-            <p>Access to advanced simulation software and testing facilities to validate your designs before the final competition.</p>
+</div>
+        <!-- Introduction -->
+        <div class='feature pagefx softpage' style="background-image: url(images/images.png); background-repeat: no-repeat; background-size: cover;">
+            <h1>Welcome to COSMIC QUEST</h1>
+            <div class="competition-highlight">
+                <p><strong>COSMIC QUEST</strong> is an international astronomy competition organized by the <strong>STEM October Astronomy Club (SOAC)</strong> specifically designed for grade 9 and high school students worldwide.</p>
+            </div>
+            
+            <h2>Our Mission</h2>
+            <p>The purpose of COSMIC QUEST is to attract attention to the wonders of the cosmos through an engaging two-round challenge that tests your knowledge and passion for astronomy and astrophysics.</p>
+            
+            <h2>Who Can Participate</h2>
+            <div class="rules-box">
+                <p><strong>Eligibility:</strong> Open to all high school students and grade 9 students</p>
+                <p><strong>Team Size:</strong> Each team must consist of exactly three members</p>
+                <p><strong>Global Competition:</strong> Students from around the world are welcome</p>
+            </div>
         </div>
-
-        <div class='deeplinking feature'>
-            <h1>🌐 How to Register</h1>
-            <p>
-                Visit our official registration portal at <a href='#registration' target="_blank" >cosmicquest.stemoct.edu</a> to secure your team's spot in this extraordinary competition.
-            </p>
-            <p>
-                Complete your registration early to access exclusive pre-competition workshops and networking events with space industry professionals.
-            </p>
-        </div>
-        <div class='deeplinking feature'>
-            <h1>📞 Contact Mission Control</h1>
-            <p>
-                Questions about Cosmic Quest? Our mission control team is ready to assist!
-            </p>
-            <p style="text-align: center">
-                <img src="images/space_mission_control.png" />
-            </p>
-            <p style="text-align: center">
-                Email: cosmicquest@stemoct.edu<br/>
-                Phone: (555) COSMIC-1<br/>
-                Discord: CosmicQuest2025
-            </p>
-        </div>
-
-        <div class='feature numbering'>
-            <h1>🏅 Judging Criteria</h1>
-            <p>
-                Projects will be evaluated by a panel of aerospace engineers, computer scientists, and NASA representatives based on multiple criteria.
-            </p>
-            <p>
-                <b>Technical Innovation (30%)</b>: Creativity and originality of your solution<br/>
-                <b>Engineering Excellence (25%)</b>: Quality of design and implementation<br/>
-                <b>Mission Success (25%)</b>: How well your project meets the challenge requirements<br/>
-                <b>Presentation (20%)</b>: Communication skills and project documentation
-            </p>
-        </div>
-        <div class='feature slideshow'>
-            <h1>🎥 Media & Documentation</h1>
-            <p>The entire competition will be professionally documented and livestreamed for global audiences.</p>
-            <p>Teams must maintain project blogs and participate in media interviews throughout the competition.</p>
-            <a href='https://youtube.com/cosmicquest2025'><img src='images/space_camera.png' alt='space camera' /></a>
-            <p>Join our social media channels for behind-the-scenes content, team spotlights, and exclusive interviews with space industry professionals!</p>
-        </div>
-
-        <div class='feature flash'>
-            <h1>🚀 SPECIAL FEATURES</h1>
-            <p>Cosmic Quest includes exclusive opportunities that set it apart from other STEM competitions. Winning teams will receive internship opportunities at partnering aerospace companies!</p>
-            <p>Top performers may be invited to NASA's Johnson Space Center for a week-long immersive space program during summer 2025.</p>
-        </div>
-        <div class='feature  wowbook-basic-page flash-demo'>
-            <div style="text-align: center; padding: 50px;">
-                <h2>🌟 Featured Video</h2>
-                <p>Watch last year's Cosmic Quest highlights and see amazing student innovations in action!</p>
-                <div style="background: linear-gradient(45deg, #1e3c72, #2a5298); padding: 20px; border-radius: 10px; color: white;">
-                    <h3>🎬 Competition Highlights Reel</h3>
-                    <p>Amazing robots, innovative designs, and student success stories</p>
-                    <button style="padding: 10px 20px; background: #ff6b35; border: none; border-radius: 5px; color: white; font-weight: bold;">▶ WATCH NOW</button>
-                </div>
+        <!-- Core Concepts Page 1 -->
+        <div class='feature pagefx softpage' style="background-image: url(images/images.png); background-repeat: no-repeat; background-size: cover;"> 
+            <h1>Core Competition Topics</h1>
+            <div class='subtitle'>Five Essential Areas of Astronomical Knowledge</div>
+            
+            <div class="competition-highlight">
+                <h2>1. Introduction to Astronomy</h2>
+                <p>Fundamental principles of astronomical observation, celestial mechanics, and the structure of the universe.</p>
+            </div>
+            
+            <div class="competition-highlight"> 
+                <h2>2. Stellar Astronomy</h2>
+                <p>Star formation, stellar evolution, stellar classification, and the life cycles of stars from birth to death.</p>
+            </div>
+            
+            <div class="competition-highlight">
+                <h2>3. Planetary Science</h2>
+                <p>Solar system dynamics, planetary formation, exoplanets, and comparative planetology.</p>
             </div>
         </div>
 
-        <div class='feature more'>
-            <h1>🌟 and MUCH MORE</h1>
+        <!-- Core Concepts Page 2 -->
+        <div class='feature pagefx softpage' style="background-image: url(images/images.png); background-repeat: no-repeat; background-size: cover;">
+            <h1>Core Topics Continued</h1>
+            
+            <div class="competition-highlight">
+                <h2>4. Galactic & Extragalactic Astronomy</h2>
+                <p>Structure and dynamics of galaxies, galaxy classification, dark matter, and large-scale structure of the universe.</p>
+            </div>
+
+            <div class="competition-highlight">
+                <h2>5. Cosmology & Astrophysics</h2>
+                <p>Big Bang theory, cosmic microwave background, dark energy, and the evolution and fate of the universe.</p>
+            </div>
+            
+            <p style="text-align: center; font-style: italic; color: #34b5be; margin-top: 40px; font-size: 1.4rem !important; font-weight: bold;">Master these concepts to excel in COSMIC QUEST!</p>
         </div>
-        <div class='feature more'>
+        
+        <!-- Competition Structure -->
+        <div class='feature pagefx softpage' style="background-image: url(images/images.png); background-repeat: no-repeat; background-size: cover;">
+            <h1>Competition Structure</h1>
+            <div class='subtitle'>Two Exciting Rounds Await</div>
+            
+            <h2>How to Participate</h2>
+            <p>Teams must register online before the deadline. Once registered, you'll receive:</p>
             <ul>
-                <li>🤝 Industry Partnerships: SpaceX, Blue Origin, NASA, Lockheed Martin</li>
-                <li>🎓 University Scholarship Opportunities for Outstanding Participants</li>
-                <li>🔬 Access to Professional Space Simulation Software</li>
-                <li>👨‍🏫 Mentorship from Aerospace Engineers and Scientists</li>
-                <li>🏆 International Recognition and Media Coverage</li>
-                <li>🚀 Potential Internship Placements at Top Aerospace Companies</li>
-                <li>📚 Exclusive Learning Resources and Space Technology Documentation</li>
-                <li>🌐 Global Network of Space Enthusiasts and Professionals</li>
+                <li>Access to the competition platform</li>
+                <li>Detailed instructions via email</li>
+                <li>Practice materials and resources</li>
+                <li>Technical support contact information</li>
             </ul>
+            
+            <div class="date-box" style="background: linear-gradient(45deg, #667eea, #764ba2);">
+                <h3>Ready to Begin?</h3>
+                <p>Register your team and start your cosmic journey!</p>
+            </div>
         </div>
+
+        <!-- First Round -->
+        <div class='feature pagefx softpage' style="background-image: url(images/images.png); background-repeat: no-repeat; background-size: cover;">
+            <h1>First Round: Open Round</h1>
+            
+            <div class="rules-box">
+                <h2>Format & Details</h2>
+                <p><strong>Questions:</strong> 30 analytical questions covering all key astronomy and astrophysics topics</p>
+                <p><strong>Duration:</strong> Three days (September 17-20, 2025)</p>
+                <p><strong>Flexibility:</strong> Teams can participate at their own pace during the competition window</p>
+                <p><strong>Tracking:</strong> Live scoreboard displays real-time team rankings</p>
+            </div>
+            
+            <div class="competition-highlight">
+                <h2>What to Expect</h2>
+                <p>The first round will test your foundational knowledge across all five core topics. Questions will range from basic concepts to more complex analytical problems that require critical thinking and application of astronomical principles.</p>
+            </div>
+        </div>
+
+        <!-- Second Round -->
+        <div class='feature pagefx softpage' style="background-image: url(images/images.png); background-repeat: no-repeat; background-size: cover;">
+            <h1>Second Round: Invitational Round</h1>
+            
+            <div class="prize-box">
+                <h2 style="margin-top: 0px !important; margin-bottom: 0px !important;">Selection Criteria</h2>
+                <p style="margin-top: 0px !important; margin-bottom: 0px !important;">Top-ranked teams from the first round will be invited based on their final scores and rankings. Only the best performers advance to this elite round!</p>
+            </div>
+            
+            <div class="competition-highlight">
+                <h2 style="margin-top: 0px !important; margin-bottom: 0px !important;">Live Monitoring Requirements</h2>
+                <p style="margin-top: 0px !important; margin-bottom: 0px !important;"><strong>Screen Sharing:</strong> Participants must share their screen throughout the round</p>
+                <p style="margin-top: 0px !important; margin-bottom: 0px !important;"><strong>Camera On:</strong> Keep your camera on to ensure integrity and fairness</p>
+                <p style="margin-top: 0px !important; margin-bottom: 0px !important;"><strong>Supervised Environment:</strong> Professional proctoring ensures fair competition</p>
+            </div>
+            
+            <div class="date-box">
+                <h2 style="margin-top: 0px !important; margin-bottom: 0px !important;">Final Challenge Format</h2>
+                <p style="margin-top: 0px !important; margin-bottom: 0px !important;"><strong>30 Advanced Multiple Choice Questions</strong></p>
+                <p style="margin-top: 0px !important; margin-bottom: 0px !important;"><strong>60 Minutes Time Limit</strong></p>
+                <p style="margin-top: 0px !important; margin-bottom: 0px !important;"><strong>Simultaneous Competition for All Teams</strong></p>
+                <p style="margin-top: 0px !important; margin-bottom: 0px !important;"><strong>September 30, 2025 at 3:00 PM GMT</strong></p>
+            </div>
+        </div>
+
+        <!-- Team Formation & Rules -->
+        <div class='feature pagefx softpage' style="background-image: url(images/images.png); background-repeat: no-repeat; background-size: cover;">
+            <h1>Team Formation & Rules</h1>
+            <div class='subtitle'>Essential Guidelines for Participation</div>
+            
+            <div class="rules-box">
+                <h2>Team Requirements</h2>
+                <p style="margin-top: 0px !important; margin-bottom: 0px !important;"><strong>Team Size:</strong> Exactly three students per team</p>
+                <p style="margin-top: 0px !important; margin-bottom: 0px !important;"><strong>Grade Level:</strong> Currently enrolled in grade 9 or high school (grades 9-12)</p>
+                <p style="margin-top: 0px !important; margin-bottom: 0px !important;"><strong>Registration:</strong> All team members must register together under one team name</p>
+                <p style="margin-top: 0px !important; margin-bottom: 0px !important;"><strong>Limitation:</strong> Each student can only be part of one team</p>
+            </div>
+            
+            <div class="competition-highlight">
+                <h2>Code of Conduct</h2>
+                <p><strong>Academic Honesty:</strong> Teams are expected to maintain the highest standards of academic integrity</p>
+                <p><strong>Respectful Behavior:</strong> Professional and respectful conduct is required throughout the competition</p>
+                <p><strong>Zero Tolerance:</strong> Any form of cheating, plagiarism, or inappropriate conduct may result in immediate disqualification</p>
+            </div>
+        </div>
+
+        <!-- Communication Rules -->
+        <div class='feature pagefx softpage' style="background-image: url(images/images.png); background-repeat: no-repeat; background-size: cover;">
+            <h1>Communication Rules</h1>
+            
+            <div class="rules-box">
+                <h2 style="margin-top: 0px !important; margin-bottom: 0px !important;">Round-Specific Guidelines</h2>
+                <p style="margin-top: 0px !important; margin-bottom: 0px !important;"><strong>First Round:</strong> Team members may collaborate freely with each other during the 3-day window</p>
+                <p style="margin-top: 0px !important; margin-bottom: 0px !important;"><strong>Second Round:</strong> External assistance or unauthorized resources are strictly prohibited during the 60-minute live session</p>
+                <p style="margin-top: 0px !important; margin-bottom: 0px !important;"><strong>Fair Play:</strong> Only collaboration between registered team members is allowed</p>
+            </div>
+            
+            <div class="competition-highlight">
+                <h2 style="margin-top: 0px !important; margin-bottom: 0px !important;">Academic Integrity</h2>
+                <p style="margin-top: 0px !important; margin-bottom: 0px !important;">We trust all participants to maintain the highest standards of academic honesty. Any violation of these rules will result in immediate disqualification and may affect future participation eligibility.</p>
+            </div>
+            
+            <div class="date-box">
+                <h2>Support Available</h2>
+                <p>Technical support and clarification on rules will be available throughout both rounds of the competition.</p>
+            </div>
+        </div>
+
+        <!-- Timeline & Key Dates -->
+        <div class='feature pagefx softpage' style="background-image: url(images/images.png); background-repeat: no-repeat; background-size: cover;">
+            <h1>Timeline & Key Dates</h1>
+            <div class='subtitle'>Mark Your Calendars!</div>
+            
+            <div class="date-box" style="background: linear-gradient(45deg, #667eea, #764ba2);">
+                <h2>Registration Period</h2>
+                <p><strong>Opens:</strong> August 15, 2025</p>
+                <p><strong>Closes:</strong> September 16, 2025</p>
+                <p style="font-size: 0.9rem; margin-top: 10px;">⚠️ Don't wait! Register early to secure your spot</p>
+            </div>
+            
+            <div class="date-box" style="background: linear-gradient(45deg, #f093fb, #f5576c);">
+                <h2>First Round: Open Competition</h2>
+                <p><strong>Duration:</strong> September 17-20, 2025</p>
+                <p><strong>Format:</strong> 30 analytical questions over 3 days</p>
+                <p><strong>Flexibility:</strong> Complete at your own pace</p>
+            </div>
+        </div>
+
+        <!-- Final Timeline -->
+        <div class='feature pagefx softpage' style="background-image: url(images/images.png); background-repeat: no-repeat; background-size: cover;">
+            <h1>Important Dates Continued</h1>
+            
+            <div class="date-box" style="background: linear-gradient(45deg, #4facfe, #4b5c9c);">
+                <h2>Second Round: Final Challenge</h2>
+                <p><strong>Date:</strong> September 30, 2025</p>
+                <p><strong>Time:</strong> 3:00 PM GMT</p>
+                <p><strong>Duration:</strong> 60 minutes</p>
+                <p><strong>Format:</strong> 30 advanced MCQ questions</p>
+            </div>
+            
+            <div class="prize-box">
+                <h2>Winner Announcement</h2>
+                <p style="font-size: 1.5rem;"><strong>October 10, 2025</strong></p>
+                <p>Final results and rankings will be officially announced</p>
+            </div>
+            
+            <div class="competition-highlight">
+                <h2>Stay Updated</h2>
+                <p>All participants will receive email notifications for each milestone and important update throughout the competition.</p>
+            </div>
+        </div>
+
+        <!-- Prizes & Recognition -->
+        <div class='feature pagefx softpage' style="background-image: url(images/images.png); background-repeat: no-repeat; background-size: cover;">
+            <h1>Prizes & Recognition</h1>
+            
+            <div class="prize-box" style="background: linear-gradient(45deg, #ffd89b, #19547b); font-size: 1.2rem;">
+                <h2 style="color: #fff;">Prize Announcement</h2>
+                <p><strong>The prizes for COSMIC QUEST will be officially revealed on</strong></p>
+                <div style="font-size: 2rem; margin: 15px 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+                    <strong>August 25, 2025</strong>
+                </div>
+                <p><strong>Stay tuned for an exciting announcement that celebrates the achievements of our top teams!</strong></p>
+            </div>
+            
+            <div class="competition-highlight" style="text-align: center; margin-top: 30px;">
+                <h2 style="margin-top: 0px !important; margin-bottom: 0px !important;">What to Expect</h2>
+                <p style="margin-top: 0px !important; margin-bottom: 0px !important;">Our prize announcement will feature:</p>
+                <ul style="text-align: left; display: inline-block;">
+                    <li>Substantial monetary rewards</li>
+                    <li>Educational opportunities and scholarships</li>
+                    <li>Recognition certificates and trophies</li>
+                    <li>Special mentorship opportunities</li>
+                    <li>Internship possibilities with astronomy organizations</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class='feature pagefx softpage' style="background-image: url(images/images.png); background-repeat: no-repeat; background-size: cover;">
+            <h1>Contact Information</h1>
+            <div class='subtitle'>Stay Connected with COSMIC QUEST</div>
+            
+            <div class="competition-highlight">
+                <h2 style="margin-top: 0px !important; margin-bottom: 0px !important;"> Official Channels</h2>
+                <p style="margin-top: 0px !important; margin-bottom: 0px !important;"><strong>Official Website:</strong> [To be announced]</p>
+                <p style="margin-top: 0px !important; margin-bottom: 0px !important;"><strong>Contact Email:</strong> [To be provided]</p>
+            </div>
+            
+            <div class="rules-box">
+                <h2 style="margin-top: 0px !important; margin-bottom: 0px !important;">Social Media & Communication</h2>
+                <h3 style="margin-top: 0px !important; margin-bottom: 0px !important;">WhatsApp</h3>
+                <p style="margin-top: 0px !important; margin-bottom: 0px !important;"><strong>Announcements Channel:</strong> [Link coming soon]</p>
+                <p style="margin-top: 0px !important; margin-bottom: 0px !important;"><strong>Chat Group:</strong> [Link coming soon]</p>
+                
+                <h3 style="margin-top: 0px !important; margin-bottom: 0px !important;">Telegram</h3>
+                <p style="margin-top: 0px !important; margin-bottom: 0px !important;"><strong>Announcements Channel:</strong> [Link coming soon]</p>
+                <p style="margin-top: 0px !important; margin-bottom: 0px !important;"><strong>Chat Group:</strong> [Link coming soon]</p>
+            </div>
+            
+            <div class="date-box">
+                <p><strong>All contact information and social media links will be updated and shared during the registration period.</strong></p>
+                <p>Follow our official channels for the latest updates, announcements, and competition news!</p>
+            </div>
+        </div>
+
+        <!-- Final Call to Action -->
+        <div class='feature pagefx softpage' style="background-image: url(images/images.png); background-repeat: no-repeat; background-size: cover;">
+            <h1>Ready to Begin Your Cosmic Journey?</h1>
+            
+            <div class="prize-box" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                <h2>Join thousands of students from around the world!</h2>
+                <p style="font-size: 1.3rem; margin: 20px 0;">COSMIC QUEST awaits your team's astronomical knowledge and passion for space science.</p>
+                <div style="font-size: 1.1rem; margin-top: 25px;">
+                    <p> Challenge your mind</p>
+                    <p> Collaborate with teammates</p>
+                    <p> Compete globally</p>
+                    <p> Win amazing prizes</p>
+                </div>
+            </div>
+            
+            <div class="competition-highlight" style="text-align: center; margin-top: 30px;">
+                <h2>The Adventure Begins</h2>
+                <p style="font-size: 1.2rem; font-style: italic;">Registration opens August 15, 2025. Don't miss your chance to explore the cosmos through competition!</p>
+            </div>
+        </div>
+
+        <!-- Back Cover -->
+        <div class='feature pagefx hardpage' style="background-image: url(images/images.png); background-repeat: no-repeat; background-size: cover;">
+            <div style="text-align: center; padding: 60px 20px;">
+                <h1 style="font-size: 2.5rem !important;">The Universe Awaits</h1>
+                <p style="font-size: 1.6rem; font-style: italic; color: #8b9ff9; margin: 40px 0;  font-weight: bold !important;">
+                    "The cosmos is within us. We are made of star-stuff. We are a way for the universe to know itself."
+                </p>
+                <p style="font-size: 1.7 rem!important; margin-top: 30px; color: #cb7bea; font-weight: bold !important;">
+                    - Carl Sagan
+                </p>
+                <div class="date-box" style="margin-top: 40px; background: linear-gradient(45deg, #667eea, #764ba2);">
+                    <p style="font-size: 1.2rem;"><strong>COSMIC QUEST 2025</strong></p>
+                    <p>Organized by STEM October Astronomy Club</p>
+                </div>
+            </div>
+        </div>
+
         <div class='last_cover'>
             <img src="images/cover_last.png" width="100%" height="100%" />
         </div>
@@ -555,13 +1014,13 @@ document.addEventListener('DOMContentLoaded', () => {
 <script type="text/javascript">
     $(document).ready(function() {
         $('#features').wowBook({
-            height : 500
-            ,width  : 800
-            ,centeredWhenClosed : true
-            ,hardcovers : true
-            ,turnPageDuration : 1000
-            ,numberedPages : [1,-2]
-            ,controls : {
+            height : 650,  // Increased from 500
+            width  : 1000, // Increased from 800
+            centeredWhenClosed : true,
+            hardcovers : true,
+            turnPageDuration : 1000,
+            numberedPages : [1,-2],
+            controls : {
                 zoomIn    : '#zoomin',
                 zoomOut   : '#zoomout',
                 next      : '#next',
@@ -572,10 +1031,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 flipSound : '#flipsound',
                 thumbnails : '#thumbs',
                 fullscreen : '#fullscreen'
-            }
-            ,scaleToFit: "#container"
-            ,thumbnailsPosition : 'bottom'
-            ,onFullscreenError : function(){
+            },
+            scaleToFit: "#container",
+            thumbnailsPosition : 'bottom',
+            onFullscreenError : function(){
                 var msg="Fullscreen failed.";
                 if (self!=top) msg="The frame is blocking full screen mode. Click on 'remove frame' button above and try to go full screen again."
                 alert(msg);
@@ -587,6 +1046,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         var book = $.wowBook("#features");
+
+        // Table of Contents Navigation
+        $('.toc-link').on('click', function(e) {
+            e.preventDefault();
+            var targetPage = parseInt($(this).data('page'));
+            book.gotoPage(targetPage);
+        });
 
         function rebuildThumbnails(){
             book.destroyThumbnails()
